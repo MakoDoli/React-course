@@ -46,4 +46,8 @@ function NewBtn() {
 
 // useEffect is a function that takes other function (defined by developer) as argument. It runs when DOM or state is updated. to not fall in infinite loop (if useEffect updates state, then updated state will run useEffect again which will updat state again --> loop) useEffect takes 2nd argument - dependencies array
 // we can add any state in dependencies array and react will track this state and run useEffect function (update component) on state's change
-//useEffect can return function which will run after component unmount
+//useEffect can return "cleanup" function which will run before (or after?) component unmount. If component renders multiple times, the previous effect is cleand up before executing next effect
+//-----------------------------------
+//------------------------------
+// 3. useContext hook - allows to work with react's Context API, which is sharing data without props, in otoher words, to share and scope values throughout components tree.
+// First we create CurrentObjContext with createContext(currentObj), then we wrap all those components in <CurrentObjContext.Provider> whose children should use this context value object </CurrentObjContext.Provider>
