@@ -56,3 +56,7 @@ function NewBtn() {
 //----------------------------
 // useRef - create/store immutable object and keep same reference between re-renders. if we store value in useRef and then increase it(useRef.current) by button click, updated number won't be updated in UI because no re-render happnes. but if re-render happnes because of other state update, then useRef.current will display current/updated value
 //we can store/reference html element in useRef.current
+//-----------------------------
+//----------------------------
+//useReducer -is also involved in state managment, but instead of directly updating state, we dispatch actions that go to reducer function, and then reducer function defines how to compute next state. useReducer takes two arguments - reducer function, and initial state (usually object)
+//reducer function takes two arguments - dispatch action and payload. action is an object: action.type is a type inside dispatch function {type: "string"} and action.payload is any value inside dispatch funciton {type: "string", payload: "I'm payload"} we want to use in updating state
