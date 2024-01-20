@@ -50,4 +50,9 @@ function NewBtn() {
 //-----------------------------------
 //------------------------------
 // 3. useContext hook - allows to work with react's Context API, which is sharing data without props, in otoher words, to share and scope values throughout components tree.
-// First we create CurrentObjContext with createContext(currentObj), then we wrap all those components in <CurrentObjContext.Provider> whose children should use this context value object </CurrentObjContext.Provider>
+// First we create CurrentObjContext with createContext(currentObj), then we wrap all those components in <CurrentObjContext.Provider> whose children should use this context 'value={ currentContext.key} </CurrentObjContext.Provider>
+// We can import context directly without provider if we dont need specific 'value={smth}' from parent
+//---------------------------
+//----------------------------
+// useRef - create/store immutable object and keep same reference between re-renders. if we store value in useRef and then increase it(useRef.current) by button click, updated number won't be updated in UI because no re-render happnes. but if re-render happnes because of other state update, then useRef.current will display current/updated value
+//we can store/reference html element in useRef.current
