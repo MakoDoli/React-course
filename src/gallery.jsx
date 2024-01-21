@@ -5,9 +5,13 @@ function Gallery() {
   return (
     <section>
       <h1> Amazing scientist</h1>
-      <Profile />
-      <Profile />
-      <Profile />
+      <Profile
+        person={{
+          name: "Katsuko Saruhashi",
+          imageId: "YfeOqp2",
+        }}
+      />
+
       <TodoList />
     </section>
   );

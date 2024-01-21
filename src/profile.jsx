@@ -1,5 +1,7 @@
-function Profile() {
-  return <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />;
+import { getImageUrl } from "./utils";
+function Profile(person) {
+  console.log(person);
+  return <img src={getImageUrl(person)} />;
 }
 
 export default Profile;
