@@ -60,3 +60,6 @@ function NewBtn() {
 //----------------------------
 //useReducer -is also involved in state managment, but instead of directly updating state, we dispatch actions that go to reducer function, and then reducer function defines how to compute next state. useReducer takes two arguments - reducer function, and initial state (usually object)
 //reducer function takes two arguments - dispatch action and payload. action is an object: action.type is a type inside dispatch function {type: "string"} and action.payload is any value inside dispatch funciton {type: "string", payload: "I'm payload"} we want to use in updating state
+//-----------------------------
+//-----------------------------
+// useMemo - is a hook that allows us to memoize expensive computation within our function component. useMemo can take callback function and dependency array as argument. callback will only execute if dep. array changes

@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useMemo, useReducer, useRef, useState } from "react";
 import "./App.css";
 import { MoodContextProvider } from "./MoodContext";
 import { MoodEmoji } from "./MoodEmoji";
@@ -47,9 +47,20 @@ function App() {
   }
   const [state, dispatch] = useReducer(reducer, objForReducer);
 
+  // useMemo hook
+
+  const square = useMemo(() => {
+    console.log("render happened");
+    return (count * Math.random()).toFixed(3);
+  }, [count]);
+  // const square = (count * Math.random()).toFixed(3);
+
   return (
     <div>
       <p>count {count}</p>
+      <p>
+        square of {count} is {square}
+      </p>
       <MoodContextProvider>
         <MoodEmoji />
       </MoodContextProvider>
@@ -61,9 +72,14 @@ function App() {
       </button>
       <input ref={myRefInput} type="text" />
       <button
-        onClick={() => dispatch({ type: "changeName", payload: "Juansher" })}
+        onClick={() =>
+          dispatch({
+            type: "changeName",
+            payload: "Juansher" + Math.random().toFixed(2),
+          })
+        }
       >
-        dispatch
+        dispatch defence!
       </button>
       <p>{state.name}</p>
     </div>
