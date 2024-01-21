@@ -1,6 +1,7 @@
 import {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useReducer,
   useRef,
@@ -65,8 +66,18 @@ function App() {
   // useCallback hook
 
   const legacy = useCallback(() => {
-    console.log("callbakc created");
+    console.log("callback created");
     alert("I'm from useCallback");
+  }, []);
+
+  //useLayoutEffect hook
+
+  const [width, setWidth] = useState(100);
+  const boxRef = useRef();
+
+  useLayoutEffect(() => {
+    const boxHeight = boxRef.current.clientHeight;
+    setWidth(boxHeight * 2);
   }, []);
 
   return (
@@ -97,6 +108,13 @@ function App() {
       </button>
       <p>{state.name}</p>
       <SomeChild onClick={legacy}>call it</SomeChild>
+
+      <div
+        ref={boxRef}
+        style={{ width: `${width}px`, height: "100px", background: "yellow" }}
+      >
+        I was measured before painting
+      </div>
     </div>
   );
 }

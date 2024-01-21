@@ -66,3 +66,6 @@ function NewBtn() {
 //----------------------------
 //---------------------------
 //useCallBack - is a hook that allows to memoize function to avoid its re-creation through re-renders. It is useful if memoized function is passed to children
+//-----------------------------
+//-----------------------------
+//useLayouteffecte hook - the callbakc function in this hook will run after component renders but before actually painting it to screen, or, screen wont be painted untill useLayoutHandle callback function finishes execution
