@@ -1,5 +1,6 @@
 import {
   useCallback,
+  useDebugValue,
   useEffect,
   useLayoutEffect,
   useMemo,
@@ -80,6 +81,10 @@ function App() {
     setWidth(boxHeight * 2);
   }, []);
 
+  // custom hook
+  const displayName = useDisplayName();
+  console.log(displayName);
+
   return (
     <div>
       <p>count {count}</p>
@@ -115,6 +120,7 @@ function App() {
       >
         I was measured before painting
       </div>
+      <span>{displayName}</span>
     </div>
   );
 }
@@ -125,5 +131,19 @@ function App() {
 
 function SomeChild({ children, onClick }) {
   return <button onClick={onClick}>{children}</button>;
+}
+
+// create custom hook
+
+function useDisplayName() {
+  const [displayName, setDisplayName] = useState("just name");
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users/4").then((res) =>
+      res.json().then((data) => setDisplayName(data.name))
+    );
+  }, []);
+  useDebugValue(displayName ?? "Loading...");
+
+  return displayName;
 }
 export default App;
