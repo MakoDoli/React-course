@@ -62,10 +62,16 @@ function NewBtn() {
 //reducer function takes two arguments - dispatch action and payload. action is an object: action.type is a type inside dispatch function {type: "string"} and action.payload is any value inside dispatch funciton {type: "string", payload: "I'm payload"} we want to use in updating state
 //-----------------------------
 //-----------------------------
-// useMemo - is a hook that allows us to memoize expensive computation within our function component. useMemo can take callback function and dependency array as argument. callback will only execute if dep. array changes
+// useMemo - is a hook that allows us to memoize expensive computation within our function component. useMemo can take callback function and dependency array as argument. callback will only execute if dependency array changes
 //----------------------------
 //---------------------------
+// React.memo differs from useMemo - its a higher-order component HOC which takes component and its props as arguments and handles memoization based on props (if props change,component re-renders, else component is memoized and doesn't render)
+//------------------------------
+//------------------------------
 //useCallBack - is a hook that allows to memoize function to avoid its re-creation through re-renders. It is useful if memoized function is passed to children
 //-----------------------------
 //-----------------------------
 //useLayouteffecte hook - the callbakc function in this hook will run after component renders but before actually painting it to screen, or, screen wont be painted untill useLayoutHandle callback function finishes execution
+//---------------------------
+//----------------------------
+// useDebugValue - will display value in dev tools component
