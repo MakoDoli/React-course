@@ -1,4 +1,11 @@
-import { useEffect, useMemo, useReducer, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from "react";
 import "./App.css";
 import { MoodContextProvider } from "./MoodContext";
 import { MoodEmoji } from "./MoodEmoji";
@@ -55,11 +62,18 @@ function App() {
   }, [count]);
   // const square = (count * Math.random()).toFixed(3);
 
+  // useCallback hook
+
+  const legacy = useCallback(() => {
+    console.log("callbakc created");
+    alert("I'm from useCallback");
+  }, []);
+
   return (
     <div>
       <p>count {count}</p>
       <p>
-        square of {count} is {square}
+        expensive computation of {count} is {square}
       </p>
       <MoodContextProvider>
         <MoodEmoji />
@@ -82,6 +96,7 @@ function App() {
         dispatch defence!
       </button>
       <p>{state.name}</p>
+      <SomeChild onClick={legacy}>call it</SomeChild>
     </div>
   );
 }
@@ -89,4 +104,8 @@ function App() {
 //   const mood = useContext(MoodContext);
 //   return <p>{mood}</p>;
 // }
+
+function SomeChild({ children, onClick }) {
+  return <button onClick={onClick}>{children}</button>;
+}
 export default App;

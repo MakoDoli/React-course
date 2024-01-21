@@ -63,3 +63,6 @@ function NewBtn() {
 //-----------------------------
 //-----------------------------
 // useMemo - is a hook that allows us to memoize expensive computation within our function component. useMemo can take callback function and dependency array as argument. callback will only execute if dep. array changes
+//----------------------------
+//---------------------------
+//useCallBack - is a hook that allows to memoize function to avoid its re-creation through re-renders. It is useful if memoized function is passed to children
