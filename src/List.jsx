@@ -1,5 +1,6 @@
 import { people } from "./data";
 import { getImageUrl } from "./utils";
+console.table(people);
 
 function List() {
   const listitems = people.map((person) => (
