@@ -7,8 +7,11 @@ function Form() {
     email: "bhepworth@sculpture.com",
   });
   const handleInput = (e) => {
-    setPerson({ ...person, [e.target.name]: e.target.value });
-  };
+    const newPerson = structuredClone(person);
+    newPerson[e.target.name] = e.target.value;
+    setPerson(newPerson);
+    // setPerson({ ...person, [e.target.name]: e.target.value });
+  }; // input 'name' atribute can be used as e.target.name to take value from "named" input
 
   return (
     <>
