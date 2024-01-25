@@ -4,7 +4,7 @@ function ContactList({ contacts, onSelect, selectedContact }) {
     <ul>
       {contacts.map((contact) => (
         <li key={contact.email}>
-          <button onClick={onSelect(contact)}>{contact.name}</button>
+          <button onClick={() => onSelect(contact)}>{contact.name}</button>
         </li>
       ))}
       <p>{selectedContact.name}</p>
