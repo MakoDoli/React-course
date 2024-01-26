@@ -8,3 +8,27 @@
 // import context through useContext hook in button component
 // add useContext()'s setSum() to button onClick handler so it updates provider's 'sum'
 //
+
+//import { useContext } from "react";
+import Button from "./Button";
+import { SumProvider } from "./SumContext";
+import MainButton from "./MainButton";
+
+function ButtonSum() {
+  return (
+    <SumProvider>
+      <div>
+        <MainButton />
+        <div>
+          <Button />
+          <Button />
+          <Button />
+          <Button />
+          <Button />
+          <Button />
+        </div>
+      </div>
+    </SumProvider>
+  );
+}
+export default ButtonSum;
