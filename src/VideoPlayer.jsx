@@ -8,9 +8,24 @@ function VideoPlayer() {
     if (isPlaying) ref.current.pause();
     if (!isPlaying) ref.current.play();
   });
-
+  const [count, setCount] = useState(0);
   return (
     <div>
+      <div>
+        <button
+          onClick={() => {
+            setCount((prev) => prev + 1);
+            console.log(count);
+            setCount((prev) => prev + 1);
+            console.log(count);
+            setCount((prev) => prev + 1);
+            console.log(count);
+          }}
+        >
+          click here
+        </button>
+        <p>Now count is {count}</p>
+      </div>
       <button onClick={() => setIsplaying(!isPlaying)}>
         {!isPlaying ? "Pause" : "Play"}
       </button>
