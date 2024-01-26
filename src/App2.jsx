@@ -6,10 +6,12 @@ import Sculptures from "./Sculptures";
 import Form from "./Form";
 import ShoppingList from "./ShoppingLIst";
 import ChatContacts from "./ChatContact";
+import VideoPlayer from "./VideoPlayer";
 
 function App2() {
   return (
     <div>
+      <VideoPlayer />
       <ChatContacts />
       <ShoppingList />
       <Form />
