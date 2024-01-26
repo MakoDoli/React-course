@@ -11,14 +11,7 @@ import {
 import "./App.css";
 import { MoodContextProvider } from "./MoodContext";
 import { MoodEmoji } from "./MoodEmoji";
-//-------------------
-//Context API
-// const moods = {
-//   happy: "😄",
-//   sad: "😥",
-// };
 
-// const MoodContext = createContext(moods);
 // //----------------------
 function App() {
   //1.   useState hook
