@@ -9,8 +9,8 @@ import {
   useState,
 } from "react";
 import "./App.css";
-import { MoodContextProvider } from "./MoodContext";
-import { MoodEmoji } from "./MoodEmoji";
+import { MoodContextProvider } from "./basics/MoodContext";
+import { MoodEmoji } from "./basics/MoodEmoji";
 
 // //----------------------
 function App() {
