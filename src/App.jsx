@@ -122,6 +122,7 @@ function App() {
 //   return <p>{mood}</p>;
 // }
 
+// eslint-disable-next-line react/prop-types
 function SomeChild({ children, onClick }) {
   return <button onClick={onClick}>{children}</button>;
 }

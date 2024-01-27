@@ -15,6 +15,7 @@
 import Button from "./Button";
 import { SumProvider } from "./SumContext";
 import MainButton from "./MainButton";
+import ResetButton from "./ResetButton";
 
 function ButtonSum() {
   return (
@@ -29,6 +30,7 @@ function ButtonSum() {
           <Button />
           <Button />
         </div>
+        <ResetButton />
       </div>
     </SumProvider>
   );
