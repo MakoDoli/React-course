@@ -2,6 +2,7 @@ import { getImageUrl } from "./utils";
 
 import(getImageUrl);
 
+// eslint-disable-next-line react/prop-types
 export function Avatar({ person, size }) {
   return (
     <img
