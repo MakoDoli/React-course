@@ -4,7 +4,7 @@ import { SumContext } from "./SumContext";
 function Button() {
   const { setSum, reset, setReset } = useContext(SumContext);
   const [count, setCount] = useState(0);
-  console.log(reset);
+
   useEffect(() => {
     if (reset) {
       setCount(0);
