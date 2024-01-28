@@ -46,14 +46,17 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 10px;
+  color: white;
+  transition: transform 0.3s ease;
 }
 button:hover {
-  border-color: #646cff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.1);
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

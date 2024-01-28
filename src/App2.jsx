@@ -7,12 +7,16 @@ import Form from "./Form";
 import ShoppingList from "./ShoppingLIst";
 import ChatContacts from "./ChatContact";
 import VideoPlayer from "./VideoPlayer";*/
+import LifeCycle from "./intermediate/LifeCycle";
 import ButtonSum from "./homework/ButtonsSum";
 
 function App2() {
   return (
     <div>
       <ButtonSum />
+      <hr></hr>
+
+      <LifeCycle />
       {/* <VideoPlayer />
       <ChatContacts />
       <ShoppingList />
