@@ -9,6 +9,8 @@ import ChatContacts from "./ChatContact";
 import VideoPlayer from "./VideoPlayer";*/
 import LifeCycle from "./intermediate/LifeCycle";
 import ButtonSum from "./homework/ButtonsSum";
+// import { MemoApp } from "./intermediate/Memoization";
+// import TodoList from "./intermediate/TodoList";
 
 function App2() {
   return (
@@ -17,7 +19,9 @@ function App2() {
       <hr></hr>
 
       <LifeCycle />
-      {/* <VideoPlayer />
+      {/* <TodoList />
+      <MemoApp /> 
+       <VideoPlayer />
       <ChatContacts />
       <ShoppingList />
       <Form />
