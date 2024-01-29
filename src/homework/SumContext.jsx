@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const SumContext = createContext({
   sum: 0,
@@ -16,4 +16,12 @@ export const SumProvider = ({ children }) => {
       {children}
     </SumContext.Provider>
   );
+};
+
+export const useSumContext = () => {
+  const context = useContext(SumContext);
+  if (Object.keys.length === 0) {
+    throw new Error("useSumProvider is used outside of SumProvider");
+  }
+  return context;
 };
