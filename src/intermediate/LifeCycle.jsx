@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 function LifeCycle() {
-  const text = "I was waiting for this!";
   const [showText, setShowText] = useState(false);
 
   return (
@@ -23,7 +22,7 @@ function Text() {
 
   useEffect(() => {
     console.log(
-      "I logged because NO DEPENDENCY ARRAY and I'm NERVOUSs and anxious and REACT on everything!"
+      "I logged because NO DEPENDENCY ARRAY and I'm NERVOUSS and ANXIOUS and REACT on everything!"
     );
   });
   useEffect(() => {
