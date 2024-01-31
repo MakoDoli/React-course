@@ -39,6 +39,7 @@ function App() {
   //5. useReducer hook
 
   const objForReducer = { name: "Tina" };
+
   function reducer(state, action) {
     switch (action.type) {
       case "changeName":

@@ -9,6 +9,7 @@ import ChatContacts from "./ChatContact";
 import VideoPlayer from "./VideoPlayer";*/
 import LifeCycle from "./intermediate/LifeCycle";
 import ButtonSum from "./homework/ButtonsSum";
+//import UseHook from "./intermediate/hooks/useRef";
 //import Accordion from "./intermediate/managestate/Accordion";
 //import StatusUpdate from "./intermediate/managestate/StatusUpdate";
 // import { MemoApp } from "./intermediate/Memoization";
@@ -21,8 +22,9 @@ function App2() {
       <hr></hr>
 
       <LifeCycle />
-      {/* <Accordion />
-      {/* <StatusUpdate />
+      {/* <UseHook />
+      <Accordion />
+       <StatusUpdate />
       <TodoList />
       <MemoApp /> 
        <VideoPlayer />
