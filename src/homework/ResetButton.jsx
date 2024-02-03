@@ -11,7 +11,6 @@ function ResetButton() {
       }}
       style={{ background: "forestgreen" }}
     >
-      {" "}
       Reset
     </button>
   );
