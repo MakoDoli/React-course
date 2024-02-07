@@ -1,7 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { SumContext } from "./SumContext";
+import useWindowSize from "../intermediate/hooks/custom/usWindowSize";
 
 function Button() {
+  const size = useWindowSize();
+
   const { setSum, reset, setReset } = useContext(SumContext);
   const [count, setCount] = useState(0);
 
@@ -15,7 +18,7 @@ function Button() {
     <button
       style={{
         margin: "10px 10px",
-        background: "#e57d90",
+        background: `${size > 760 ? "#e57d90" : "yellow"}`,
         borderRadius: "8px",
       }}
       onClick={() => {

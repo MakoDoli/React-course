@@ -2,7 +2,7 @@ import "./App.css";
 
 import LifeCycle from "./intermediate/theory/LifeCycle";
 import ButtonSum from "./homework/ButtonsSum";
-import { FlyOut } from "./intermediate/design patterns/Compound";
+import WithReducer from "./basics/withReducer";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <ButtonSum />
       <hr></hr>
       <LifeCycle />
-      <FlyOut.Input />
+      <WithReducer />
     </div>
   );
 }
