@@ -32,6 +32,7 @@ export default function CalculatePrime() {
 
   const prime = useMemo(() => {
     return findNthPrime(number);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [number]);
 
   return (
@@ -41,10 +42,12 @@ export default function CalculatePrime() {
         width: 200,
         height: 200,
         padding: 20,
-        background: `${isShy ? "seagreen" : "pink"}`,
+        background: `${!isShy ? "seagreen" : "pink"}`,
       }}
     >
-      <button onClick={() => setIsShy(!isShy)}>make me blush</button>
+      <button style={{ color: "slategray" }} onClick={() => setIsShy(!isShy)}>
+        make me blush
+      </button>
       <input
         type="number"
         value={number}
