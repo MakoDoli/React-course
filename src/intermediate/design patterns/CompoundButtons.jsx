@@ -7,6 +7,7 @@ const SumContext = createContext({
   setReset: () => {},
 });
 
+// eslint-disable-next-line react/prop-types
 export default function SumProvider({ children }) {
   const [sum, setSum] = useState(0);
   const [reset, setReset] = useState(false);
@@ -48,6 +49,7 @@ function CountBtn() {
       setCount(0);
       setReset(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reset]);
 
   return (
